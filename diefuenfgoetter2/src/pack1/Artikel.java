@@ -7,14 +7,23 @@ public class Artikel {
 	private String artikelnr;
 	private double gewicht;
 	private int lagerbestand;
-	private int anzahl;
-	
+	private int anzahlImWarenkorb;
+
 	public Artikel() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public void zumwarenkorbhinzufuegen(int panzahl) {
-		
+
+	public double rabattierterArtikel(String pRabattcode) {
+
+		if (pRabattcode.equals("niklas10")) {
+			preis = preis - (preis * 0.1);
+		}else if(pRabattcode.equals("marie30")) {
+			preis = preis -(preis * 0.30);
+		}else if(pRabattcode.equals("martin15")) {
+			preis = preis -(preis * 0.15);
+		}
+		return preis;
+
 	}
 
 	public String getName() {
@@ -58,13 +67,11 @@ public class Artikel {
 	}
 
 	public int getAnzahl() {
-		return anzahl;
+		return anzahlImWarenkorb;
 	}
 
 	public void setAnzahl(int anzahl) {
-		this.anzahl = anzahl;
+		this.anzahlImWarenkorb = anzahl;
 	}
-	
 
-	
 }
