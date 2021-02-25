@@ -14,13 +14,13 @@ public class Artikel {
 	}
 
 	public double rabattierterArtikel(String pRabattcode) {
-		
+
 		if (pRabattcode.equals("1")) {
 			preis = preis - (preis * 0.1);
-		}else if(pRabattcode.equals("2")) {
-			preis = preis -(preis * 0.30);
-		}else if(pRabattcode.equals("3")) {
-			preis = preis -(preis * 0.15);
+		} else if (pRabattcode.equals("2")) {
+			preis = preis - (preis * 0.30);
+		} else if (pRabattcode.equals("3")) {
+			preis = preis - (preis * 0.15);
 		}
 		return preis;
 
