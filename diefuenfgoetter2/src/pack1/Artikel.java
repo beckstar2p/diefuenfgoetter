@@ -15,8 +15,8 @@ public class Artikel {
 
 	public double rabattierterArtikel(String pRabattcode) {
 
-		if (pRabattcode.equals("1")) {
-			preis = preis - (preis * 0.1);
+		if (pRabattcode.equals("Hennig")) {
+			preis = preis - 0.01;
 		} else if (pRabattcode.equals("2")) {
 			preis = preis - (preis * 0.30);
 		} else if (pRabattcode.equals("3")) {

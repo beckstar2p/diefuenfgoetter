@@ -13,8 +13,7 @@ public class Warenkorb {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void zumWarenkorbHinzufuegen(Artikel pArtikel, int pAnzahl) {
-		pArtikel.setAnzahl(pAnzahl);
+	public void zumWarenkorbHinzufuegen(Artikel pArtikel) {
 		artikelliste.add(pArtikel);
 	}
 
@@ -39,8 +38,8 @@ public class Warenkorb {
 
 	public double rabattieren(String pRabattcode) {
 		
-		if (pRabattcode.equals("niklas10")) {
-			gesamtpreis = gesamtpreis - (gesamtpreis * 0.1);
+		if (pRabattcode.equals("niklas100")) {
+			gesamtpreis = gesamtpreis - (gesamtpreis * 1);
 		}else if(pRabattcode.equals("marie30")) {
 			gesamtpreis = gesamtpreis -(gesamtpreis * 0.30);
 		}else if(pRabattcode.equals("martin15")) {
